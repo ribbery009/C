@@ -126,11 +126,11 @@ int *ElemiCiklus(int *populacio, const int erzekeny, const int beteg, const int 
 
             if (populacio[partnerSorszam] == 1)
             {
-                printf("partner allapot: %d \n", populacio[partnerSorszam]);
+                // printf("partner allapot: %d \n", populacio[partnerSorszam]);
                 if (vsz < 10)
                 {
                     populacio[betegSorszam] = 1;
-                    printf("megfertozodott: %d \n", populacio[betegSorszam]);
+                    // printf("megfertozodott: %d \n", populacio[betegSorszam]);
                 }
             }
             kapcsolo++;
@@ -207,17 +207,14 @@ int main()
                     int vsz = rand() % (101 - 1) + 1;
                     if (vsz < gyogyul)
                     {
-                        printf("\nBeteg - vsz: %d gyogyul: %d letszam: %d i: %d\n", vsz, gyogyul, beteg_letszam, i);
+                        // printf("\nBeteg - vsz: %d gyogyul: %d letszam: %d i: %d\n", vsz, gyogyul, beteg_letszam, i);
 
-                        printf("\nGYOGYULAS elotti sorszam: %d\n", kezdeti_betegek[betegSorszam]);
+                        // printf("\nGYOGYULAS elotti sorszam: %d\n", kezdeti_betegek[betegSorszam]);
                         gyogyult_letszam++;
                         beteg_letszam--;
-                        if (beteg_letszam <= 0)
-                        {
-                            printf("\nvsz: %d gyogyul: %d letszam: %d i: %d\n", vsz, gyogyul, beteg_letszam, i);
-                        }
+                     
                         kezdeti_betegek[betegSorszam] = 2;
-                        printf("\nGYOGYULAS utani sorszam: %d\n", kezdeti_betegek[betegSorszam]);
+                        // printf("\nGYOGYULAS utani sorszam: %d\n", kezdeti_betegek[betegSorszam]);
                     }
                     kapcsolo++;
                 }
